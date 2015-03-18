@@ -9,15 +9,16 @@ True False app
 <head>
   <!-- Use jQuery from a CDN -->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="/retrieveTrueFlase.js"></script>
-  <title>Dice</title>
+  <script type="text/javascript" src="/trueOrFalse.js"></script>
+  <title>True or False program</title>
 </head>
 
 <body>
   <h3>True or False</h3>
   <div></div>
-  <div>
-  <input type="button" onclick="throwDice()" value="ROLL 'EM"/>
+  <h4>data[0].text</h4>
+  <input type="button" onclick="trueButton()" value="True"/>
+  <input type="button" onclick="falseButton()" value="False"/>
   <div id="output"></div>
 </body>
 
