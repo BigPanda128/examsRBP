@@ -9,11 +9,13 @@ var data = require('./trueFalse.js');
 function trueButton() {
 	if (data[0].value === true) {
 		answerList.push('correct');
+		$('#output').append('correct');
 	} else {
 		answerList.push('incorrect');
+		$('#output').append('incorrect');
 	}
 	//$('#output').empty();
-	$('#output').append(true);
+	//$('#output').append(true);
 }
 
 function falseButton() {
