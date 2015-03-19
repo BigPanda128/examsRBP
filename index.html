@@ -9,16 +9,43 @@ True False app
 <head>
   <!-- Use jQuery from a CDN -->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="/trueOrFalse.js"></script>
+  <!-- <script type="text/javascript" src="/trueOrFalse.js"></script>-->
   <title>True or False program</title>
 </head>
 
 <body>
   <h3>True or False</h3>
   <div></div>
-  <h4>data[0].text</h4>
+  <h4>Question to be asked</h4>
   <input type="button" onclick="trueButton()" value="True"/>
   <input type="button" onclick="falseButton()" value="False"/>
+  <script>
+var answerList = [];
+
+var data = require('./trueFalse.js');
+
+function trueButton() {
+	if (data[0].value === true) {
+		answerList.push('correct');
+	} else {
+		answerList.push('incorrect');
+	}
+	var result = answerList[0];
+	$('#output').empty();
+	$('#output').append(result);
+}
+function falseButton() {
+	if (data[0].value === false) {
+		answerList.push('correct');
+	} else {
+		answerList.push('incorrect');
+	}
+	//$('#output').empty();
+	$('#output').append('false');
+}
+
+
+</scrpit>
   <div id="output"></div>
 </body>
 
