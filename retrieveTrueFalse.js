@@ -9,6 +9,7 @@
 //pull my data set from origin copy
 var data = require('./trueFalse.js');
 
+console.log(data);
 //get the readline capabilities
 var readline = require('readline');
 
@@ -48,11 +49,11 @@ for (var i = 0; i < data.length; ++i) {
 }*/
 
 //directions for user to follow
-console.log('Enter true or false \n');
+//console.log('Enter true or false \n');
 
 //bread and butter of alpha testing
 
-
+/*
 rl.question(data[0].text + ": ", function(line){
 	console.log("You answered: ", line);
 	console.log(typeof line);
@@ -65,7 +66,7 @@ rl.question(data[0].text + ": ", function(line){
 	rl.close();
 	console.log(answers);
 });
-
+*/
 
 
 //test code
