@@ -17,36 +17,27 @@ True False app
   <h3>True or False</h3>
   <div></div>
   <h4>Question to be asked</h4>
-  <input type="button" onclick="trueButton()" value="True"/>
-  <input type="button" onclick="falseButton()" value="False"/>
+  <input type="button" onclick="truefalseButton(true)" value="True"/>
+  <input type="button" onclick="truefalseButton(false)" value="False"/>
   <script>
-var answerList = [];
-
-var data = require('./trueFalse.js');
-
-function trueButton() {
-	if (data[0].value === true) {
-		answerList.push('correct');
-	} else {
-		answerList.push('incorrect');
+	function truefalseButton(answer) {
+		$('#output').empty();
+		var answerList = [];
+		var data = require('./trueFalse.js');
+		
+		if (answer == true) {
+			answerList.push('true');
+			$('#output').append('<pre>' + data + '</pre>');
+		} else {
+			answerList.push('false');
+			$('#output').append('<pre>' + data[0] + '</pre>');
+		}
+		var result = 'hello';
+		$('#output').append(result);
 	}
-	var result = answerList[0];
-	$('#output').empty();
-	$('#output').append(result);
-}
-function falseButton() {
-	if (data[0].value === false) {
-		answerList.push('correct');
-	} else {
-		answerList.push('incorrect');
-	}
-	//$('#output').empty();
-	$('#output').append('false');
-}
 
-
-</scrpit>
-  <div id="output"></div>
+</script>
+<div id="output"></div>
 </body>
 
 </html>
